@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root {
+  --font-md: 1.125rem;
+  --font-lg: 1.563rem;
+  --font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: 178, 100%, 50%;
+  --cyan-hsl: hsl(var(--cyan));
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: var(--very-dark-blue-main);
+  font-family: var(--font-family);
+  font-size: var(--font-md);
+  color: var(--soft-blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: auto 1rem;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+footer .attribution {
+  font-size: 12px;
+  text-align: center;
+}
+footer .attribution a {
+  color: var(--white);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 18.688rem;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  background-color: var(--very-dark-blue-card);
+  transition: ease-in-out 0.5s;
+}
+.section:hover {
+  box-shadow: 0px 5px 30px black;
+  transform: scale(110%);
+}
+.section__img-container {
+  display: flex;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.section__img-container img {
+  width: 100%;
+}
+.section__img-container-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  background-color: var(--cyan-hsl);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+.section__img-container-overlay img {
+  height: 3rem;
+  width: 3rem;
+}
+.section__img-container-overlay:hover {
+  background-color: hsla(var(--cyan), 0.5);
+  opacity: 1;
+}
+.section__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  gap: 1rem;
+}
+.section__content__title {
+  margin: 0;
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+}
+.section__content__title:hover {
+  color: var(--cyan-hsl);
+}
+.section__content__desc {
+  font-weight: 300;
+}
+.section__content__details-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 23.4375em) {
+  .section__content__details-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.section__content__details-flex-eth {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+  color: var(--cyan-hsl);
+}
+.section__content__details-flex-time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+}
+.section__line {
+  margin: 0;
+  height: 0.063rem;
+  width: 100%;
+  background-color: var(--very-dark-blue-line);
+  border: none;
+}
+.section__user-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+  padding-top: 0.5rem;
+}
+@media (max-width: 23.4375em) {
+  .section__user-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.section__user-flex img {
+  height: 1.875rem;
+  width: 1.875rem;
+  border: 0.063rem solid var(--white);
+  border-radius: 100%;
+}
+.section__user-flex p {
+  font-size: var(--font-md);
+  font-weight: 400;
+  margin: 0;
+}
+.section__user-flex p span {
+  font-weight: 300;
+  color: var(--white);
+  cursor: pointer;
+}
+.section__user-flex p span:hover {
+  color: var(--cyan-hsl);
+}/*# sourceMappingURL=styles.css.map */
